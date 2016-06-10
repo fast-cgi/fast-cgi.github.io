@@ -1,0 +1,10 @@
+---
+layout: base
+stylesheet: page
+---
+<nav>
+    <a href="/" title="Home page">&lsaquo; Back</a>
+</nav>
+<main {% if page.main_class or layout.main_class %}class="{{ layout.main_class }} {{ page.main_class }}"{% endif %}>
+    {{ content }}
+</main>

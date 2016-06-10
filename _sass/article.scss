@@ -1,0 +1,103 @@
+@mixin text-header($padding: $text-header-padding,
+                   $color: $header-color,
+                   $font: $header-font,
+                   $weight: $header-weight,
+                   $size: $text-header-font-size) {
+    padding: $padding;
+
+    color: $color;
+
+    text-align: center;
+
+    font-family: $font;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+.title {
+    @include text-header;
+}
+
+.article {
+    & > header:first-of-type {
+        @include text-header;
+    }
+
+    & > section {
+        margin: 0 auto;
+        padding: 0 $text-margin $par-spacing;
+
+        max-width: $text-width;
+
+        text-align: left;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $header-font;
+        font-weight: $header-weight;
+
+        margin: 0;
+        margin-bottom: $par-spacing/2;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: $par-spacing;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: $par-spacing;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p, ul, ol, div, hr, table {
+        margin: 0;
+        margin-bottom: $par-spacing;
+
+        line-height: 1.8;
+    }
+
+    ul ul, ul ol, ol ul, ol ol {
+        margin-bottom: 0;
+    }
+
+    pre {
+        line-height: 1;
+    }
+
+    hr {
+        border: none;
+        border-bottom: 1px solid $header-color;
+    }
+
+    table {
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: collapse;
+        empty-cells: hide;
+
+        th, td {
+            padding: 0 5px;
+            border: $table-border;
+            text-align: center;
+        }
+
+
+        th:empty, td:empty {
+            border: none;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        td:first-child {
+            text-align: left;
+        }
+    }
+}

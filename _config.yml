@@ -1,0 +1,11 @@
+domain: fast-cgi.github.io
+
+name: Unofficial FastCGI Specification website
+author: fbbdev
+description: Unofficial home of the FastCGI Spec
+
+sass:
+    style: :compressed
+
+# gem:
+#    - octopress-debugger

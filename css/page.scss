@@ -1,0 +1,148 @@
+---
+---
+
+@import 'base';
+
+body {
+    position: relative;
+
+    margin-bottom: -$footer-height;
+    padding-bottom: $footer-height;
+
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+body > nav:first-of-type {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    z-index: 50;
+
+    padding: $navbar-margin;
+
+    color: $header-color;
+
+    font-family: $header-font;
+    font-weight: $header-weight;
+
+    font-size: $navbar-font-size;
+
+    pointer-events: none;
+
+    @include no-select;
+
+    & > a {
+        display: inline-block;
+        vertical-align: middle;
+
+        margin-left: $navbar-spacing;
+        padding: 0 15px;
+
+        height: 50px;
+        line-height: 50px;
+
+        border: 1px solid $header-color;
+        border-radius: 25px;
+
+        background: $bg;
+        color: $header-color;
+
+        text-align: center;
+
+        pointer-events: all;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:link, &:active, &:visited {
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: $link-color-hover;
+            border-color: $link-color-hover;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    body > nav:first-of-type > a {
+        margin-left: $navbar-spacing/2;
+    }
+}
+
+.article {
+    padding-top: (2*$navbar-margin + 50px - $text-header-padding);
+}
+
+@media (min-height: 600px) and (max-width: 1000px) {
+    .article {
+        padding-top: (2*$navbar-margin + 50px);
+    }
+}
+
+@media (max-height: 599px) and (max-width: 1000px) {
+    .article > header:first-of-type {
+        padding-bottom: $navbar-margin;
+    }
+}
+
+@media (max-width: 480px) {
+    .article > header:first-of-type {
+        padding-left: $navbar-margin;
+        padding-right: $navbar-margin;
+    }
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* fix iOS bug not displaying 100vh correctly */
+/* ipad */
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape),
+       only screen and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+    body {
+        min-height: 768px;
+    }
+}
+
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait),
+       only screen and (device-width: 1024px) and (device-height: 768px) and (orientation: portrait) {
+    body {
+        min-height: 1024px;
+    }
+}
+
+/* iphone5 and iphone4 landscape */
+@media only screen and (device-width: 320px) and (device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2),
+       only screen and (device-width: 568px) and (device-height: 320px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2),
+       only screen and (device-width: 320px) and (device-height: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio : 2),
+       only screen and (device-width: 480px) and (device-height: 320px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio : 2) {
+    body {
+        min-height: 320px;
+    }
+}
+
+/* iphone5 portrait */
+@media only screen and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2),
+       only screen and (device-width: 568px) and (device-height: 320px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    body {
+        min-height: 568px;
+    }
+}
+
+/* iphone4 portrait */
+@media only screen and (device-width: 320px) and (device-height: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio : 2),
+       only screen and (device-width: 480px) and (device-height: 320px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio : 2) {
+    body {
+        min-height: 480px;
+    }
+}

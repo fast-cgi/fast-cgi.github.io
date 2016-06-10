@@ -1,0 +1,35 @@
+$bg: #fff;
+$fg: #000;
+$font: 'PT Sans', sans-serif;
+
+$link-color: #333;
+$link-color-hover: #777;
+$link-decoration: underline;
+
+$header-font: 'Raleway', sans-serif;
+$header-weight: 100;
+$header-color: $fg;
+
+$navbar-font-size: 1.5em;
+$navbar-margin: 10px;
+$navbar-spacing: 10px;
+
+$text-header-padding: 40px;
+$text-header-font-size: 4em;
+$text-width: 600px;
+$text-margin: 40px;
+$par-spacing: 25px;
+
+$table-border: 1px solid #eee;
+
+$code-bg: $bg;
+$code-font: monospace;
+
+$footer-height: 50px;
+$footer-padding: 20px;
+$footer-line-height: 30px;
+$footer-font-size: 15px;
+$footer-bg: none;
+$footer-color: $link-color-hover;
+$footer-color-hover: $link-color;
+$footer-link-decoration: underline;

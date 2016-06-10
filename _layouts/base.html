@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include meta.html %}
+
+    {% if page.title %}
+        <title>{{ page.title }} - {{ site.name }}</title>
+    {% else %}
+        <title>{{ site.name }}</title>
+    {% endif %}
+
+    {% if page.stylesheet %}
+        <link href="/css/{{ page.stylesheet }}.css" rel="stylesheet" type="text/css">
+    {% endif %}
+
+    {% if layout.stylesheet %}
+        <link href="/css/{{ layout.stylesheet }}.css" rel="stylesheet" type="text/css">
+    {% endif %}
+
+    {% if page.style %}
+        <style>
+            {{ page.style }}
+        </style>
+    {% endif %}
+</head>
+<body>
+    {{ content }}
+    {% include footer.html %}
+</body>
+</html>

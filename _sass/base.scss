@@ -1,0 +1,72 @@
+@import 'theme';
+
+@import 'fonts';
+
+@import 'no-select';
+
+body {
+    margin: 0;
+
+    background: $bg;
+
+    font-family: $font;
+    color: $fg;
+}
+
+a {
+    &:link, &:active, &:visited {
+        color: $link-color;
+        text-decoration: $link-decoration;
+    }
+
+    &:hover {
+        color: $link-color-hover;
+    }
+
+    code {
+        text-decoration: $link-decoration;
+    }
+}
+
+footer {
+    padding: (($footer-height - $footer-line-height) / 2) $footer-padding;
+
+    line-height: $footer-line-height;
+
+    background: $footer-bg;
+    color: $footer-color;
+
+    text-align: center;
+
+    font-size: $footer-font-size;
+
+    @include no-select;
+
+    a:link,
+    a:active,
+    a:visited {
+        color: $footer-color;
+        text-decoration: $footer-link-decoration;
+    }
+
+    a:hover {
+        color: $footer-color-hover;
+    }
+
+    .dot {
+        display: inline-block;
+
+        margin: 0 10px;
+
+        vertical-align: top;
+
+        font-weight: bold;
+    }
+
+    .dot:before {
+        content: '\b7';
+    }
+}
+
+@import 'article';
+@import 'code';
