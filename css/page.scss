@@ -98,6 +98,12 @@ body > nav:first-of-type {
     }
 }
 
+@media (max-width: 480px), (max-height: 480px) {
+    .article p, .article ul, .article ol, .article div, .article hr, .article table {
+        line-height: 1.5;
+    }
+}
+
 footer {
     position: absolute;
     left: 0;
