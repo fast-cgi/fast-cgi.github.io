@@ -16,8 +16,8 @@ Nicely formatted, with updated links.
 The original webpage from fastcgi.com, pulled from the Wayback Machine archive.
 
 {:center}
-[Source code](https://github.com/fast-cgi/spec){:blank}  
-Repository with markdown and HTML source code.
+[Github repository](https://github.com/fast-cgi/spec){:blank}
+Repository with markdown version and original HTML page.
 
 {:warning}
 **Warning**
