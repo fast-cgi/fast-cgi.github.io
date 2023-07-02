@@ -66,6 +66,10 @@ body > nav:first-of-type {
             color: $link-color-hover;
             border-color: $link-color-hover;
         }
+
+        &:nth-of-type(1) {
+            -webkit-text-stroke: .5px;
+        }
     }
 }
 
